@@ -1,6 +1,9 @@
 package com.noirix.homework2;
 
-public class Car {
+
+
+
+public class Car implements  CarsMoveInterface, Comparable<Car> {
     private String brand;
     private String model;
     private String ownerFullName;
@@ -13,7 +16,8 @@ public class Car {
     public Car() {
     }
 
-    public Car(String brand, String model, String ownerFullName, String color, int yearOfCreation, double engineVolume, String typeOfEngine, double fuelConsumption) {
+    public Car(String brand, String model, String ownerFullName, String color,
+               int yearOfCreation, double engineVolume, String typeOfEngine, double fuelConsumption) {
         this.brand = brand;
         this.model = model;
         this.ownerFullName = ownerFullName;
@@ -135,4 +139,23 @@ public class Car {
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
     }
+
+
+    @Override
+    public int compareTo(Car o) {
+        return this.getYearOfCreation() - o.getYearOfCreation();
+    }
+
+    @Override
+    public void run() {
+        System.out.println(this.brand+" "+this.model+"движется");
+        
+    }
+
+    @Override
+    public double consumption() {
+        return this.fuelConsumption;
+    }
+
+
 }
