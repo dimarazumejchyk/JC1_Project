@@ -1,4 +1,4 @@
-package com.noirix.homework2;
+package com.noirix.homework2.service;
 
 public interface CarsBrandInterface {
     String CAR_BRAND0 = "BMW";

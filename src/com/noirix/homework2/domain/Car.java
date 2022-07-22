@@ -1,9 +1,9 @@
-package com.noirix.homework2;
+package com.noirix.homework2.domain;
 
 
+import com.noirix.homework2.service.CarsMoveInterface;
 
-
-public class Car implements  CarsMoveInterface, Comparable<Car> {
+public class Car implements CarsMoveInterface, Comparable<Car> {
     private String brand;
     private String model;
     private String ownerFullName;
@@ -147,13 +147,14 @@ public class Car implements  CarsMoveInterface, Comparable<Car> {
     }
 
     @Override
-    public void run() {
-        System.out.println(this.brand+" "+this.model+"движется");
+    public void run(Car car) {
+        System.out.println(this.brand + " " + this.model + " движется");
         
     }
 
     @Override
     public double consumption() {
+
         return this.fuelConsumption;
     }
 
