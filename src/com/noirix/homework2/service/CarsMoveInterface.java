@@ -4,7 +4,8 @@ import com.noirix.homework2.domain.Car;
 
 public interface CarsMoveInterface {
 
-    void run(Car car);
+
+    void run();
 
     double consumption();
 }

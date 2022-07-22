@@ -28,7 +28,7 @@ public class Car implements CarsMoveInterface, Comparable<Car> {
         this.fuelConsumption = fuelConsumption;
     }
 
-    public String getBrand() {
+    public String getBrand(String s) {
         return brand;
     }
 
@@ -147,9 +147,8 @@ public class Car implements CarsMoveInterface, Comparable<Car> {
     }
 
     @Override
-    public void run(Car car) {
+    public void run() {
         System.out.println(this.brand + " " + this.model + " движется");
-        
     }
 
     @Override
