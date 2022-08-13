@@ -11,14 +11,14 @@ public class Main {
 
     public static void main(String[] args) {
         Car[] cars = CarUtil.carsArray(10);
+
         Arrays.sort(cars);
-
-        CarsMoveInterface carsMoveInterface = new Car();
-
         for (Car carTemp : cars) {
             System.out.println(carTemp);
         }
 
+
+        CarsMoveInterface carsMoveInterface = new Car();
         carsMoveInterface.run();
         carsMoveInterface.consumption();
 

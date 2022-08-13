@@ -19,8 +19,8 @@ public class CarUtil {
 
             Car[] cars = new Car[carsQuantity];
 
-            Car car0 = new Car(CAR_BRAND0, "535", "Tyuiop", "black", 2000, 3,"diesel",7);
-            Car car1 = new Car(CAR_BRAND1, "Q7", "Sdfghj", "white", 2017, 4.2,"diesel",8.7);
+            Car car0 = new Car(CAR_BRAND0, "530", "Tyuiop", "black", 2000, 3,"diesel",7);
+            Car car1 = new Car(CAR_BRAND1, "Q7", "Sdfghj", "white", 2017, 4.2,"diesel",7.7);
             Car car2 = new Car(CAR_BRAND2, "Touran", "Zxcvb", "black", 2003, 2.2,"diesel",8.7);
             Car car3 = new Car(CAR_BRAND3,"212","Qwerty","silver",2007,2.0,"gasoline",8.8);
             Car car4 = new Car(CAR_BRAND4, "ALMERA", "Cvbnm", "silver", 2009, 1.8,"diesel",8.7);
