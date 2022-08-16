@@ -28,28 +28,5 @@ public class SecondTask {
             }
         }
 
-        hashBooks.stream().sorted();
-
-        System.out.println("+++++++++++++++++++++++++++++++");
-
-        TreeSet<Book> treeSetBooks = new TreeSet<>();
-        treeSetBooks.addAll(hashBooks);
-        for (Object tempBook: treeSetBooks) {
-            System.out.println(tempBook);
-        }
-        System.out.println("TreeSet size is " + treeSetBooks.size());
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

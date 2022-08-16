@@ -9,14 +9,11 @@ public class ExceptionTest {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter string:");
         String myString = scanner.nextLine();
-        System.out.println(myString);
 
         try {
-            // именно здесь String преобразуется в int
             int i = Integer.parseInt(myString.trim());
 
-            // выведем на экран значение после конвертации
-            System.out.println("int i = " + i);
+            System.out.println("int i*10 = " + i*10);
         }
         catch (NumberFormatException nfe)
         {

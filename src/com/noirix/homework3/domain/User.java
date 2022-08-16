@@ -1,5 +1,6 @@
 package com.noirix.homework3.domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -43,7 +44,7 @@ public class User {
         this.surname = surname;
     }
 
-    public List<User> getFriends() {
+    public List<User> getFriends(ArrayList<User> users) {
         return friends;
     }
 

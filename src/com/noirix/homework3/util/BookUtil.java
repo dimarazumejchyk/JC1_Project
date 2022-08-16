@@ -11,18 +11,9 @@ public class BookUtil {
 
         LinkedList<Book> bookLinkedList = new LinkedList<>();
 
-        for (int i = 0; i <= listCapacity; i++) {
-
-            Book book = new Book();
-
+        for (int i = 1; i <= listCapacity; i++) {
+            Book book = generateBook();
             bookLinkedList.add(book);
-
-            book.setTitle(generateTitle(12));
-            book.setLastNameAuthorsName(generateLastNameAuthors());
-            book.setAuthorsName(generateAuthorsName());
-            book.setPatronymicAuthorsName(generatePatronymicAuthorsName());
-            book.setYearOfPublication(generateYearOfPublication());
-            book.setRandomString(generateRandomString(10));
         }
         return bookLinkedList;
     }
@@ -55,21 +46,21 @@ public class BookUtil {
 
 
     private static String generateLastNameAuthors() {
-        String[] arrayLastNameAuthors = {"Andrews", "Backer", "Clarkson", "May", "Hammond" };
+        String[] arrayLastNameAuthors = {"Andrews", "Backer", "Clarkson", "May", "Hammond", "White", "Harris", "Thompson", "Brown", "Smith", "Johnson", "Robinson", "Young", "Walker" };
         Random random = new Random();
         int n = random.nextInt(arrayLastNameAuthors.length);
         return arrayLastNameAuthors[n];
     }
 
     private static String generateAuthorsName() {
-        String[] arrayAuthorsName = {"Oliver", "Garry", "Jack", "George", "Henry" };
+        String[] arrayAuthorsName = {"Oliver", "Garry", "Jack", "George", "Henry", "Marcus", "Corey", "Ronald", "Austin", "Billy", "Wayne", "Leroy", "Vincent", "Carlos", "Glenn", "Sam", "Laura", "Pamela", "Florence", "Amy" };
         Random random = new Random();
         int n = random.nextInt(arrayAuthorsName.length);
         return arrayAuthorsName[n];
     }
 
     private static String generatePatronymicAuthorsName() {
-        String[] arrayPatronymicAuthorsName = {"Jonny", "Connor", "Owen", "Ronny", "Tommy" };
+        String[] arrayPatronymicAuthorsName = {"Jonny", "Connor", "Owen", "Ronny", "Tommy", "Oliver", "Garry", "Jack", "George", "Henry", "Marcus", "Corey", "Ronald", "Austin", "Billy", "Wayne", "Leroy", "Vincent", "Carlos", "Glenn", "Sam" };
         Random random = new Random();
         int n = random.nextInt(arrayPatronymicAuthorsName.length);
         return arrayPatronymicAuthorsName[n];

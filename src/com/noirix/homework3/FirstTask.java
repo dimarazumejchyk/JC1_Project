@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public class FirstTask {
     public static void main(String[] args) {
 
-        LinkedList<Book> linkedBooks = BookUtil.generateListBook(19);
+        LinkedList<Book> linkedBooks = BookUtil.generateListBook(20);
 
         System.out.println("Source LinkedList size " + linkedBooks.size());
         PrintUtil.print(linkedBooks);

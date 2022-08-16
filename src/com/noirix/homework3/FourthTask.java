@@ -11,7 +11,7 @@ public class FourthTask {
 
         TreeSet<Student> treeSet = new TreeSet<>();
         int studentQuantity;
-        for ( studentQuantity = 0; studentQuantity < 10; studentQuantity++) {
+        for ( studentQuantity = 0; studentQuantity < 20; studentQuantity++) {
             treeSet.add(StudentUtil.generateStudent());
         }
         System.out.println("treeSet size " + treeSet.size());

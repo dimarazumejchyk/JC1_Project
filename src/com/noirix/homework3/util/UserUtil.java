@@ -3,17 +3,35 @@ package com.noirix.homework3.util;
 import com.noirix.homework3.domain.User;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class UserUtil {
+
 
     public static User userGenerate() {
         User user = new User();
         user.setId(idGenerate());
         user.setName(nameGenerate());
         user.setSurname(surnameGenerate());
-        user.setFriends(friendsGenerate(2));
+        user.setFriends(friendsGenerate(5));
         return user;
+    }
+
+    public static ArrayList<User> friendsGenerate(int friendsCapacity) {
+        ArrayList<User> friendsList = new ArrayList<>();
+        for (int i = 1; i <= friendsCapacity; i++) {
+            User user = new User();
+            user.setId(idGenerate());
+            user.setName(nameGenerate());
+            user.setSurname(surnameGenerate());
+            user.setFriends(friendsGenerate(friendsCapacity - 1));
+            friendsList.add(user);
+            if (friendsList.size() == friendsCapacity)
+                return friendsList;
+
+        }
+        return friendsList;
     }
 
 
@@ -38,29 +56,12 @@ public class UserUtil {
     }
 
 
-    private static ArrayList<User> friendsGenerate(int friendsCapacity) {
-        ArrayList<User> friendsList = new ArrayList<>();
-        for (int i = 1; i <= friendsCapacity; i++) {
-            User user = new User();
-            user.setId(idGenerate());
-            user.setName(nameGenerate());
-            user.setSurname(surnameGenerate());
-            user.setFriends(friendsFriendsGenerate(2));
-            friendsList.add(user);
-        }
-        return friendsList;
+    public static void printFriendsList(List<User> friendsList) {
 
-    }
-    private static ArrayList<User> friendsFriendsGenerate(int friendsFriendCapacity) {
-        ArrayList<User> friendsFriendsList = new ArrayList<>();
-        for (int i = 1; i <= friendsFriendCapacity; i++) {
-            User user = new User();
-            user.setId(idGenerate());
-            user.setName(nameGenerate());
-            user.setSurname(surnameGenerate());
-            friendsFriendsList.add(user);
+        for (User  friend : friendsList) {
+               System.out.print(friend.getName() + " ");
+            }
         }
-        return friendsFriendsList;
 
-    }
+
 }
